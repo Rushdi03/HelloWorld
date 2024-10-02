@@ -5,7 +5,7 @@ class ToDoModel:
     def add_task(self, task):
         self.tasks.append(task)  # Add a task to the list
 
-     Uncomment this function later
+    # Uncomment this function later
      def delete_task(self, task_index):
          if 0 <= task_index < len(self.tasks):
              del self.tasks[task_index]  # Delete the task at the specified index
@@ -21,9 +21,9 @@ class ToDoView:
             print(f"{i}. {task}")  # Print each task with its index
 
     # Uncomment this function later
-    # def sort_todo_list(self, tasks):
-    #     sorted_tasks = sorted(tasks)  # Sort the tasks alphabetically
-    #     self.print_todo_list(sorted_tasks)  # Print the sorted to-do list
+     def sort_todo_list(self, tasks):
+        sorted_tasks = sorted(tasks)  # Sort the tasks alphabetically
+         self.print_todo_list(sorted_tasks)  # Print the sorted to-do list
 
 
 class ToDoController:
@@ -35,17 +35,17 @@ class ToDoController:
         self.model.add_task(task)  # Call the model to add a task
 
     # Uncomment this function later
-    # def delete_task(self, task_index):
-    #     self.model.delete_task(task_index)  # Call the model to delete a task
+     def delete_task(self, task_index):
+         self.model.delete_task(task_index)  # Call the model to delete a task
 
     def display_todo_list(self):
         tasks = self.model.get_tasks()  # Retrieve the list of tasks from the model
         self.view.print_todo_list(tasks)  # Call the view to display the list
 
     # Uncomment this function later
-    # def sort_todo_list(self):
-    #     tasks = self.model.get_tasks()  # Retrieve the list of tasks from the model
-    #     self.view.sort_todo_list(tasks)  # Call the view to sort and display the list
+     def sort_todo_list(self):
+        tasks = self.model.get_tasks()  # Retrieve the list of tasks from the model
+        self.view.sort_todo_list(tasks)  # Call the view to sort and display the list
 
 
 def main():
